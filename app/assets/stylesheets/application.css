@@ -12,6 +12,7 @@
  *
  *= require bootstrap
  *= require full-width-pics
+ *= require modern-business
  *= require_tree .
  *= require_self
  */
