@@ -1,77 +1,36 @@
-%html{:lang => "en"}
-  %head
-    %meta{:charset => "utf-8"}
-      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-          %meta{:content => "", :name => "description"}
-            %meta{:content => "", :name => "author"}
-              %title Appalachian Healthcare Group
-              / Bootstrap Core CSS
-              %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
-                / Custom CSS
-                %link{:href => "css/full-width-pics.css", :rel => "stylesheet"}
-                  / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-                  / WARNING: Respond.js doesn't work if you view the page via file://
-                  /[if lt IE 9]
-                    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-                    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  %body
-    / Navigation
-    %nav.navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
-      .container
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand{:href => "#"} Appalachian Health
-        / Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          %ul.nav.navbar-nav
-            %li
-              %a{:href => "#"} Hospitals
-            %li
-              %a{:href => "#"} About
-            %li
-              %a{:href => "#"} Contact
-        / /.navbar-collapse
-      / /.container
-    / Full Width Image Header with Logo
-    / Image backgrounds are set within the full-width-pics.css file.
-    %header.image-bg-fluid-height
-      %img.img-responsive.img-center{:alt => "", :src => "http://www.brandcrowd.com/gallery/brands/pictures/picture12659328261654.jpg"}
-    / Content Section
-    %section
-      .container
-        .row
-          .col-lg-12
-            %h1.section-heading Section Heading
-            %p.lead.section-lead Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            %p.section-paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.
-    / Fixed Height Image Aside
-    / Image backgrounds are set within the full-width-pics.css file.
-    %aside.image-bg-fixed-height
-    / Content Section
-    %section
-      .container
-        .row
-          .col-lg-12
-            %h1.section-heading Section Heading
-            %p.lead.section-lead Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            %p.section-paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.
-        / /.row
-      / /.container
-    / Footer
-    %footer
-      .container
-        .row
-          .col-lg-12
-            %p Copyright © Your Website 2014
-        / /.row
-      / /.container
-    / jQuery
-    %script{:src => "js/jquery.js"}
-    / Bootstrap Core JavaScript
-    %script{:src => "js/bootstrap.min.js"}
+
+%header.image-bg-fluid-height
+  %img.img-responsive.img-center{:alt => "", :src => "http://www.brandcrowd.com/gallery/brands/pictures/picture12659328261654.jpg"}
+/ Content Section
+%section
+  .container
+    .row
+      .col-lg-12
+        %h1.section-heading Section Heading
+        %p.lead.section-lead Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        %p.section-paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.
+/ Fixed Height Image Aside
+/ Image backgrounds are set within the full-width-pics.css file.
+%aside.image-bg-fixed-height
+/ Content Section
+%section
+  .container
+    .row
+      .col-lg-12
+        %h1.section-heading Section Heading
+        %p.lead.section-lead Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        %p.section-paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.
+    / /.row
+  / /.container
+/ Footer
+%footer
+  .container
+    .row
+      .col-lg-12
+        %p Copyright © Your Website 2014
+    / /.row
+  / /.container
+/ jQuery
+%script{:src => "js/jquery.js"}
+/ Bootstrap Core JavaScript
+%script{:src => "js/bootstrap.min.js"}
