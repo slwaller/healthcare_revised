@@ -47,7 +47,7 @@
             Free & Open Source
         .panel-body
           %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?
-          %a.btn.btn-default{:href => "#"} Add Your Hospital
+          %a.btn.btn-default{:href => "/hospitals/new"} Add Your Hospital
     .col-md-4
       .panel.panel-default
         .panel-heading
@@ -63,23 +63,17 @@
     .col-lg-12
       %h2.page-header Our Providers
     .col-md-4.col-sm-6
-      %a{:href => "portfolio-item.html"}
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      %a{:href => "portfolio-item.html"}
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      %a{:href => "portfolio-item.html"}
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      %a{:href => "portfolio-item.html"}
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      %a{:href => "portfolio-item.html"}
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
-    .col-md-4.col-sm-6
-      %a{:href => "portfolio-item.html"}
-        %img.img-responsive.img-portfolio.img-hover{:alt => "", :src => "http://placehold.it/700x450"}/
+      - @hospitals.each do |hospital|
+        .col-md-4
+        .panel.panel-default
+          .panel-heading
+            %h4
+              %i.fa.fa-fw.fa-check
+              = hospital.name
+          .panel-body
+            %p hospital.description
+            =link_to "View Facility", hospital_path(hospital), class: "btn.btn-default"
+
   / /.row
   / Features Section
   .row

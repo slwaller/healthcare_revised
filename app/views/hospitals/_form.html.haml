@@ -1,0 +1,17 @@
+.jumbotron  
+  %center  
+    = form_for @hospital do |f|
+      %br
+        .form-label
+          = f.label :name
+        .form-group
+          = f.text_field :name, class: "form-control", placeholder: "Please input the name of your hospital"
+        .form-label
+          = f.label :address
+        .form-group
+          = f.text_field :address, class: "form-control", placeholder: "Input the address of your location"
+        .form-label
+          = f.label :description
+        .form-group 
+          = f.text_field :description, class: "form-control", placeholder: "Give a brief description of your hospital/specializations"
+        = f.submit "Submit", class: "btn btn-lg btn-success"
