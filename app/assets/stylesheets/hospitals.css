@@ -44,13 +44,13 @@ section.module.parallax h1 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 section.module.parallax-1 {
-  background-image: url("http://www.listofimages.com/wallpapers/2012/02/appalachian-trail-along-foggy-ridge-beautiful-foggy-forest-mist-mountains-nature-path-tennessee-trail-way-1050x3360.jpg");
+  background-image: url("http://www.brandcrowd.com/gallery/brands/pictures/picture12659328261654.jpg");
 }
 section.module.parallax-2 {
-  background-image: url("http://colosimophotography.com/wp-content/uploads/2013/09/Houston-skyline.jpg");
+  background-image: url("../img/demo/_small/2.jpg");
 }
 section.module.parallax-3 {
-  background-image: url("http://static.tumblr.com/db6c8d64eb2c52e0894552f8a2bf4cc9/p0k3q5v/Rh1mhtdgl/tumblr_static_mount-katahdin1.jpg");
+  background-image: url("../img/demo/_small/3.jpg");
 }
 
 @media all and (min-width: 600px) {
