@@ -1,0 +1,13 @@
+.buttonfix{
+  position: absolute; 
+  left: 100px; 
+  top: 150px;
+}
+
+.divfix{
+  height:250px; 
+  max-height:250px; 
+  display: inline-block; 
+  width:300px; 
+  max-width:300px}
+}

@@ -62,7 +62,7 @@
     - @hospitals.each do |hospital|
       .col-md-4.col-sm-6
         .col-md-4
-        .panel.panel-default{:style => "height:250px; max-height:250px; display: inline-block; width:300px; max-width:300px;"}
+        .panel.panel-default.divfix
           .panel-heading
             %h4
               %i.fa.fa-fw.fa-check
@@ -70,6 +70,7 @@
           .panel-body
             %p
               = hospital.description
+          .panel-body.buttonfix
             =link_to "View Facility", hospital_path(hospital), class: "btn btn-primary"
   .row
     .col-lg-12
