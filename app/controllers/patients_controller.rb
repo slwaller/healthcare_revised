@@ -31,6 +31,12 @@ class PatientsController < ApplicationController
   def edit
     @hospital = Hospital.find params[:hospital_id]
   end
+
+  def destroy
+    @hospital = Hospital.find params[:hospital_id]
+    @patient.delete
+    redirect_to hospitals_path
+  end
   
   def update
     @hospital = Hospital.find params[:hospital_id]
