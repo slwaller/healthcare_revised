@@ -1,0 +1,67 @@
+%body
+  .container
+    / Jumbotron Header
+    %header.jumbotron.hero-spacer
+      %h1 
+        = @hospital.name
+      %p 
+        = @hospital.description
+      %center
+        %br
+        = link_to "Sign In A Patient", new_hospital_patient_path(@hospital), class: "btn btn-success btn-large"
+    %hr/
+    / Title
+    .row
+      .col-lg-12
+        %h3 Latest Features
+    / /.row
+    / Page Features
+    .row.text-center
+      .col-md-3.col-sm-6.hero-feature
+        .thumbnail
+          %img{:src => "http://lorempixel.com/800/500/people/1"}/
+          .caption
+            %h3 Feature Label
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            %p
+              %a.btn.btn-primary{:href => "#"} View Patient
+      .col-md-3.col-sm-6.hero-feature
+        .thumbnail
+          %img{:src => "http://lorempixel.com/800/500/people/4"}/
+          .caption
+            %h3 Feature Label
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            %p
+              %a.btn.btn-primary{:href => "#"} View Patient!
+      .col-md-3.col-sm-6.hero-feature
+        .thumbnail
+          %img{:src => "http://lorempixel.com/800/500/people/2"}/
+          .caption
+            %h3 Feature Label
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            %p
+              %a.btn.btn-primary{:href => "#"} View Patient!
+      .col-md-3.col-sm-6.hero-feature
+        .thumbnail
+          %img{:src => "http://lorempixel.com/800/500/people/9"}/
+          .caption
+            %h3 Feature Label
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            %p
+              %a.btn.btn-primary{:href => "#"} View Patient!
+
+    %hr
+    %center
+      = link_to "Edit Hospital", edit_hospital_path(@hospital), class: "btn btn-primary", method: :get
+      = link_to "Delete Hospital", hospital_path(@hospital), method: :delete, class: "btn btn-danger"
+    %hr
+    / Footer
+    %footer
+      .row
+        .col-lg-12
+          %p Copyright © Your Website 2014
+  / /.container
+  / jQuery
+  %script{:src => "js/jquery.js"}
+  / Bootstrap Core JavaScript
+  %script{:src => "js/bootstrap.min.js"}

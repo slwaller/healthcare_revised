@@ -31,7 +31,7 @@
       %h1.page-header
         Welcome to Appalachian Health
     .col-md-4
-      .panel.panel-default
+      .panel.panel-default.divfix
         .panel-heading
           %h4
             %i.fa.fa-fw.fa-check
@@ -40,16 +40,16 @@
           %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?
           %a.btn.btn-default{:href => "#"} Learn More
     .col-md-4
-      .panel.panel-default
+      .panel.panel-default.divfix
         .panel-heading
           %h4
             %i.fa.fa-fw.fa-gift
             Free & Open Source
         .panel-body
           %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?
-          %a.btn.btn-success{:href => "/hospitals/new"} Add Your Hospital
+          = button_to "Add Your Hospital", new_hospital_path, class: "btn btn-success", method: :get
     .col-md-4
-      .panel.panel-default
+      .panel.panel-default.divfix
         .panel-heading
           %h4
             %i.fa.fa-fw.fa-compass
