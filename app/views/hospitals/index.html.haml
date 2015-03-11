@@ -69,7 +69,7 @@
               = hospital.name
           .panel-body
             %p
-              = hospital.description
+              = truncate(hospital.description, :length => 150)
           .panel-body.buttonfix
             =link_to "View Facility", hospital_path(hospital), class: "btn btn-primary"
   .row
