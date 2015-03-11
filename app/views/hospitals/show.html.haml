@@ -13,42 +13,21 @@
     / Title
     .row
       .col-lg-12
-        %h3 Latest Features
-    / /.row
-    / Page Features
-    .row.text-center
-      .col-md-3.col-sm-6.hero-feature
-        .thumbnail
-          %img{:src => "http://lorempixel.com/800/500/people/1"}/
-          .caption
-            %h3 Feature Label
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            %p
-              %a.btn.btn-primary{:href => "#"} View Patient
-      .col-md-3.col-sm-6.hero-feature
-        .thumbnail
-          %img{:src => "http://lorempixel.com/800/500/people/4"}/
-          .caption
-            %h3 Feature Label
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            %p
-              %a.btn.btn-primary{:href => "#"} View Patient!
-      .col-md-3.col-sm-6.hero-feature
-        .thumbnail
-          %img{:src => "http://lorempixel.com/800/500/people/2"}/
-          .caption
-            %h3 Feature Label
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            %p
-              %a.btn.btn-primary{:href => "#"} View Patient!
-      .col-md-3.col-sm-6.hero-feature
-        .thumbnail
-          %img{:src => "http://lorempixel.com/800/500/people/9"}/
-          .caption
-            %h3 Feature Label
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            %p
-              %a.btn.btn-primary{:href => "#"} View Patient!
+        %h3 Our Patients
+        
+      .row.text-center
+        - @hospital.patients.each do |patient|
+          .col-md-3.col-sm-6.hero-feature
+            .thumbnail
+              %img{:src => "http://lorempixel.com/800/500/people/#{rand 1..10}"}/
+              .caption
+                %h3
+                  = patient.first_name
+                  = patient.last_name
+                %p
+                  = truncate(patient.reason, :length => 80)
+                %p
+                  = link_to "View Patient", hospital_patient_path(@hospital, patient), class: "btn btn-sm btn-success"
 
     %hr
     %center
