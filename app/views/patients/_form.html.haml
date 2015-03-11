@@ -1,0 +1,30 @@
+.jumbotron  
+  %center  
+    = form_for [@hospital, @patient] do |f|
+      %br
+        .form-label
+          = f.label :first_name
+        .form-group
+          = f.text_field :first_name, class: "form-control", placeholder: "Please input the first name of the patient"
+        .form-label
+          = f.label :last_name
+        .form-group
+          = f.text_field :last_name, class: "form-control", placeholder: "Please input the last name of the patient"
+        .form-label
+          = f.label :dob
+          = f.date_select :dob,                   |
+            :start_year => Date.today.year - 120, |
+            :end_year => Date.today.year + 120,   |
+            :order => [:day, :month, :year]       |
+        .form-label
+          = f.label :reason
+        .form-group
+          = f.text_area :reason, class: "form-control", placeholder: "Input the symptoms or reason for visit"
+        .form-label
+          = f.label :gender
+          = f.radio_button :gender, 'Male', :checked => true
+          = label :male, 'Male'
+          = f.radio_button :gender, 'Female'
+          = label :gender, 'Female'
+        .form-label
+          = f.submit "Submit", class: "btn btn-lg btn-success"
