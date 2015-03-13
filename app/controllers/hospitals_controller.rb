@@ -30,7 +30,7 @@ class HospitalsController < ApplicationController
   def update
     @hospital = Hospital.find params[:id]
     @hospital.update_attributes hospital_params
-    redirect_to hospitals_path
+    redirect_to hospital_path(@hospital)
   end
 
   def destroy
