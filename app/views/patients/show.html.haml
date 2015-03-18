@@ -1,0 +1,45 @@
+.container
+  .row
+    .col-md-3
+      %p.lead
+        - @hospital.patients.each do |patient|
+          .thumbnail
+            %img{:src => "http://lorempixel.com/800/500/people/#{rand 1..10}"}/
+            .caption
+              %h3
+                = patient.first_name
+                = patient.last_name
+              %p
+                = patient.dob
+              %br
+                = patient.reason
+    .col-md-9
+      .thumbnail
+        %img.img-responsive{:alt => "", :src => "http://www.verticalvisions.biz/files/2013/05/Ex_Patient_Room-800x300.jpg"}
+          .caption-full
+            %h4.pull-right=@patient.dob
+            %h4
+              =@patient.first_name
+              =@patient.last_name
+            %p
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      .well
+        .text-right
+          %a.btn.btn-success Workflow states
+        %hr
+          .row
+            .col-md-12
+              Workflow state machine under construction!
+/ /.container
+.container
+  %hr
+    / Footer
+    %footer
+      .row
+        .col-lg-12
+          %p Copyright © Your Website 2014
+/ /.container
+/ jQuery
+%script{:src => "js/jquery.js"}
+/ Bootstrap Core JavaScript
+%script{:src => "js/bootstrap.min.js"}
