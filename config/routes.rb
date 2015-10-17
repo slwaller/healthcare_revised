@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :hospitals do
+
+    member do
+      post :create_doctor
+      delete :delete_doctor
+    end
     resources :patients
   end
   # Example of regular route:
