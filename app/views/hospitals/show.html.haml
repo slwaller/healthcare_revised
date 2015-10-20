@@ -28,6 +28,20 @@
                   = truncate(patient.reason, :length => 80)
                 %p
                   = link_to "View Patient", hospital_patient_path(@hospital, patient), class: "btn btn-sm btn-success"
+= form_for @doctor, url: create_doctor_hospital_path(@hospital) do |f|
+  = f.label :dr_name, "Add Doctor to Hospital"
+  = f.text_field :dr_name
+  %br
+  = f.submit "Submit", class: "submit_btn", disabled: 'disabled'
+%br
+%strong
+  Doctors
+%ul.doctor_list
+  - @hospital.doctors.each do |doctor|
+    - if doctor.dr_name
+      %li
+        = doctor.dr_name
+        = link_to "|Delete Doctor|", delete_doctor_hospital_path(@hospital, doctor_id: doctor.id), method: :delete
 
     %hr
     %center
